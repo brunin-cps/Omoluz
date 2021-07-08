@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">OnlyMsg</string>
+    <string name="botao_cadastrar">Cadastrar</string>
+    <string name="texto_validacao">Validação</string>
+    <string name="texto_descricao_validacao">Digite abaixo o codigo de verificacao enviado por SMS</string>
+    <string name="botao_confirmar">Confirmar</string>
+    <string name="logo_img">app logo</string>
+    <string name="input_name">Digite seu nome</string>
+    <string name="input_numero">Numero</string>
+    <string name="input_postal_code">cp</string>
+    <string name="input_ddd">ddd</string>
+    <string name="input_email">Digite seu email</string>
+    <string name="input_password">Digite sua senha</string>
+    <string name="button_login">Logar</string>
+    <string name="text_register">Não tem conta? Cadastre-se.</string>
+    <string name="input_register_name">Digite seu nome</string>
+    <string name="input_register_email">Digite seu e-mail</string>
+    <string name="input_register_password">Digite sua senha</string>
+    <string name="image_user_icon">user icon</string>
+    <string name="menu_settings">settings</string>
+    <string name="menu_signout">signout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

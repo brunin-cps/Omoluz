@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "440187547243",
+    "project_id": "onlymsg-78a58",
+    "storage_bucket": "onlymsg-78a58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440187547243:android:cd0ae67b3a42e89ca04b2e",
+        "android_client_info": {
+          "package_name": "com.android.onlymsg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440187547243-9qfv2q3h65s4uvfe28avqhn12es0093r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.onlymsg",
+            "certificate_hash": "fff5d000f26884e00028ad6641c0d02586475845"
+          }
+        },
+        {
+          "client_id": "440187547243-av53mpiuaie952fv328j267r61spu5n0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMkqVFQYp-PjBziInJCZNXfGU3UPNPrIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440187547243-av53mpiuaie952fv328j267r61spu5n0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

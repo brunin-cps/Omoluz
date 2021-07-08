@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:text="Bruno"
+        android:id="@+id/tv_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/CoffeePot"
+        android:textSize="18sp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        />
+    <TextView
+        android:text="Ezique"
+        android:id="@+id/tv_email"
+        android:textColor="@color/CoffeePot"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+
+    >
+    </TextView>
+
+</LinearLayout>
