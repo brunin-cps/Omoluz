@@ -8,9 +8,7 @@ Android message app connected with Firebase that was developed in my entrepreneu
 This app may not run in a different android version than when it was done.
 
 ## Requisites
-- Install [node](https://nodejs.org/en/)
-- Install [expo-cli](https://docs.expo.io/workflow/expo-cli/)
-- Install Android Studio and run its [Emulator](https://developer.android.com/studio/run/emulator) **or** Expo app ([Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US) on your physical device; 
+- Install Android Studio
 
 ## Instructions
 - Clone this repository;
