@@ -4,22 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/CoffeePotLight"
+    android:background="@drawable/health2"
     tools:context=".activity.RegisterUserActivity">
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="150dp"
         android:layout_height="113dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="48dp"
         android:contentDescription="@string/image_user_icon"
+        android:src="@drawable/usuario"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.39"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:srcCompat="@drawable/usuario" />
+        app:layout_constraintVertical_chainStyle="packed" />
+    <!--app:srcCompat="@drawable/ic_baseline_person_add_24" -->
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
@@ -30,6 +32,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -40,8 +43,11 @@
             android:id="@+id/edit_register_nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/ColorSecondary"
             android:hint="@string/input_register_name"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -53,6 +59,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -63,8 +70,11 @@
             android:id="@+id/edit_register_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/ColorSecondary"
             android:hint="@string/input_register_email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -76,7 +86,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_register"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/switch_paciente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,8 +97,25 @@
             android:id="@+id/edit_register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/input_register_password" />
+            android:background="@color/ColorSecondary"
+            android:hint="@string/input_register_password"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Switch
+        android:id="@+id/switch_paciente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/paciente_field"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_register"
@@ -95,14 +123,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:text="@string/botao_cadastrar"
-        app:backgroundTint="@color/CoffeePot"
+        android:textColor="@color/ColorSecondary"
+        app:backgroundTint="@color/ColorButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+        app:layout_constraintTop_toBottomOf="@+id/switch_paciente" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,4 +21,5 @@
     <string name="menu_signout">signout</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="paciente_field">Paciente</string>
 </resources>

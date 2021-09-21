@@ -9,13 +9,15 @@
     <color name="white">#FFFFFFFF</color>
 
 
-    <color name="CoffeePot">#67595E</color>
-    <color name="CoffeePotLight">#A49393</color>
-    <color name="DustyRose">#EED6D3</color>
+    <color name="ColorButton">#FFFFFFFF</color>
+    <color name="ColorPrimary">	#96D6E0</color>
+    <color name="ColorSecondary">#000000</color>
     <color name="Rosewater">#E8B4B8</color>
     <color name="gray_clean">#A7A7A7</color>
     <color name="CoffeeAlternative">#67595B</color>
     <color name="CoffeePotLight2">#908181</color>
     <color name="CoffeeLight">#AFA1A1</color>
+    <color name="ColorTextConversations">#7B7B7B</color>
+    <color name="MessageRight">#011627</color>
 
 </resources>

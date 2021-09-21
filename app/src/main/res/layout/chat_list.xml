@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:textColor="@color/CoffeePot"
+        android:textColor="@color/ColorTextConversations"
         android:textSize="18sp"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
@@ -21,7 +21,7 @@
     <TextView
         android:text="Ezique"
         android:id="@+id/tv_last_message"
-        android:textColor="@color/CoffeePot"
+        android:textColor="@color/ColorTextConversations"
         android:textSize="14sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

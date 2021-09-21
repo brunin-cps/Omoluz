@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.android.onlymsg.R;
@@ -31,6 +32,7 @@ public class RegisterUserActivity extends AppCompatActivity {
     private TextInputEditText email;
     private TextInputEditText password;
     private Button btRegister;
+    private Switch typeUser;
     private User user;
 
     FirebaseAuth auth;
@@ -46,6 +48,8 @@ public class RegisterUserActivity extends AppCompatActivity {
         email= findViewById(R.id.edit_register_email);
         password = findViewById(R.id.edit_register_password);
         btRegister = findViewById(R.id.button_register);
+        typeUser = findViewById(R.id.switch_paciente);
+
 
         btRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +63,7 @@ public class RegisterUserActivity extends AppCompatActivity {
                     user.setName(name.getText().toString());
                     user.setEmail(email.getText().toString());
                     user.setPassword(password.getText().toString());
-
+                    user.setTypeUser(typeUser.isChecked());
                     RegisterUser();
                 }else{
                     Toast.makeText(RegisterUserActivity.this, "Não deixe campo vazio", Toast.LENGTH_LONG).show();
@@ -99,6 +103,10 @@ public class RegisterUserActivity extends AppCompatActivity {
                     Preferences preferences = new Preferences(RegisterUserActivity.this);
                     preferences.SaveData(idUser,user.getName());
 
+                    if (user.getTypeUser()){
+
+                    }
+
                     openLoggedUser();
 
                     /**
@@ -126,6 +134,9 @@ public class RegisterUserActivity extends AppCompatActivity {
     }
 
     public void openLoggedUser(){
+
+
+
         Intent intent = new Intent(RegisterUserActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();

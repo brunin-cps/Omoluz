@@ -14,5 +14,6 @@
         android:paddingBottom="6dp"
         android:layout_alignParentRight="true"
         android:background="@drawable/rounded_corner_right"
+        android:textColor="@color/white"
         ></TextView>
 </RelativeLayout>

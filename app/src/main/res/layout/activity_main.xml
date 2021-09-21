@@ -16,7 +16,7 @@
         android:id="@+id/slt_tabs"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="@color/CoffeePotLight"
+        android:background="@color/ColorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/viewPager"></com.android.onlymsg.helper.SlidingTabLayout>
 
     <androidx.viewpager.widget.ViewPager

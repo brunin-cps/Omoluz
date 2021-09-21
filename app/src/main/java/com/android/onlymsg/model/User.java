@@ -9,6 +9,10 @@ public class User {
     private String name;
     private String email;
     private String password;
+    private Boolean typeUser;
+
+
+
     /**
     private String Usertype;
 
@@ -64,5 +68,11 @@ public class User {
         this.password = password;
     }
 
+    public Boolean getTypeUser() {
+        return typeUser;
+    }
 
+    public void setTypeUser(Boolean typeUser) {
+        this.typeUser = typeUser;
+    }
 }

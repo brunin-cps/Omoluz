@@ -5,8 +5,8 @@
 
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-        <item name="colorPrimary">@color/CoffeePotLight</item>
-        <item name="colorPrimaryVariant">@color/CoffeePot</item>
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryVariant">@color/ColorSecondary</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:textColorPrimary">#000000</item>
 

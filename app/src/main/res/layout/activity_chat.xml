@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Mensagem"
-            android:textColor="@color/CoffeePot"></EditText>
+            android:textColor="@color/ColorSecondary"></EditText>
 
         <ImageButton
             android:id="@+id/bt_send"

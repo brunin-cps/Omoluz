@@ -11,6 +11,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private String idContact;
     private DatabaseReference dbReference;
+    private ValueEventListener valueEventListenerContacts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         auth = ConfigFirebase.getFirebaseAuth();
         toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("OnlyMsg");
+        toolbar.setTitle("Omoluz");
         setSupportActionBar(toolbar);
 
         slidingTabLayout = findViewById(R.id.slt_tabs);
@@ -183,6 +185,62 @@ public class MainActivity extends AppCompatActivity {
 
         alertDialog.create();
         alertDialog.show();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        dbReference.removeEventListener(valueEventListenerContacts);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        dbReference = ConfigFirebase.getFirebase();
+        valueEventListenerContacts = new ValueEventListener(){
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dados: snapshot.getChildren()){
+                    //String typeUser = dados.child("typeUser").getValue().toString();
+
+                    User user = dados.getValue(User.class);
+
+                    if (!user.getTypeUser()){
+                        String idContact = Base64Converter.CodeToBase64(user.getEmail());
+
+                        //Get id from logged user
+                        Preferences preferences = new Preferences(MainActivity.this);
+                        String idLoggedUser = preferences.getUserId();
+
+                        dbReference = ConfigFirebase.getFirebase();
+                        //Create a node contacts if doest exist
+                        dbReference = dbReference.child("contacts")
+                                .child(idLoggedUser)
+                                .child(idContact);
+
+                        Contact contact = new Contact();
+                        contact.setEmail(user.getEmail());
+                        contact.setIdUser(idContact);
+                        contact.setName(user.getName());
+
+                        //Adding values to contacts of the database
+                        dbReference.setValue(contact);
+                    }
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        };
+
+        dbReference.child("users").addValueEventListener(valueEventListenerContacts);
+
+
+
     }
 
     private void logoutUser(){
