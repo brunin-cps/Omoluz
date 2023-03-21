@@ -1,4 +1,4 @@
-# OnlyMsg
+# Omoluz
 ![](https://i.imgur.com/TkC23vN.png)
 
 
